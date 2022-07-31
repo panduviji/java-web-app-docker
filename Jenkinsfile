@@ -22,7 +22,7 @@ node{
         }
         sh 'docker push dockerhandson/java-web-app'
      }
-     
+     /*
       stage('Run Docker Image In Dev Server'){
         
         def dockerRun = ' docker run  -d -p 8080:8080 --name java-web-app dockerhandson/java-web-app'
@@ -33,7 +33,7 @@ node{
           sh 'ssh  ubuntu@172.31.20.72 docker rmi -f  $(docker images -q) || true'
           sh "ssh  ubuntu@172.31.20.72 ${dockerRun}"
        }
-       
+       */
     }
      
      
